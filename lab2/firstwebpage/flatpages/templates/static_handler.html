@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="{{ STATIC_URL }}/static/index.css">
         <title>Привет, Мир!</title>
     </head>
     <body>
@@ -11,6 +12,7 @@
             уровней.</h3>
         <h4>
         <p>Здесь есть маркированный список:</p>
+        <br>
 		<ul>
             <li>Элемент 1;</li>
             <li>элемент 2;</li>
@@ -18,6 +20,7 @@
             <li>последний элемент.</li>
         </ul>
         <p>И нумерованный список:</p>
+        <br>
 		<ol>
             <li>Элемент 1;</li>
             <li>элемент 2;</li>
@@ -94,5 +97,7 @@
                 <td>Строка 7 Столбец 6</td>
             </tr>
         </table>
+        {% load static %}
+        <p><img src="{% static 'down_picture.jpg' %}" alt="Здесь должна быть картинка"></p>
     </body>
 </html>
