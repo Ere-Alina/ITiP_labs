@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>{{post.title}}</title>
+    <header>
+    <head>
+        <link rel="stylesheet" href="{{STATIC_URL}}/static/article.css">
+    </head>
+    <body class="article">
+        <div class="header">
+        <img src= "https://abitur.mtuci.ru/bitrix/templates/modern_blue_s5/images/abitur_MTUCI-logo.png">
+        <a href="../"> Все записи</a>
+    </div>
+    <div class="articlediv">
+        <div class="one-post">
+            <h2 class="post-title">{{ post.title }}</h2>
+            <div class="article-info">
+            <div class="article-author">{{ post.author.username }}</div>
+            <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+        </div>
+    </div>
+    </body>
+</html>
